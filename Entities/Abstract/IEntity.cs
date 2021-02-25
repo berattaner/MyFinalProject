@@ -8,5 +8,6 @@ namespace Entities.Abstract
     // IEntity implement eden class bir veritabanı tablosudur.Kendi yorumumuz.
     public interface IEntity
     {
+
     }
 }

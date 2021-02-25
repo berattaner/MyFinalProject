@@ -24,6 +24,7 @@ namespace Business.Concrete
             //Yetkisi var mı?
 
             return _productDal.GetAll();
+
         }
     }
 }

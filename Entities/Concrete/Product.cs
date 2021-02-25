@@ -15,5 +15,6 @@ namespace Entities.Concrete
         public string ProductName { get; set; }
         public short UnitsInStock { get; set; } //short int'in bir küçüğü.
         public decimal UnitPrice { get; set; }  //decimal para birimini tutar.
+
     }
 }

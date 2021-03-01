@@ -36,7 +36,7 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (NorthwindContext context = new NorthwindContext())
             {
-                return context.Set<Product>().SingleOrDefault(filter); //Prıduct category customer olabilir.Category ve customerda.
+                return context.Set<Product>().SingleOrDefault(filter); //Product category customer olabilir.Category ve customerda.
             }
         }
 

@@ -20,6 +20,7 @@ namespace DataAccess.Concrete.EntityFramework
         //Hangi tabloya ne karşılık gelecek.
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Customer> Costomers { get; set; }  
+        public DbSet<Customer> Costomers { get; set; }
+        public DbSet<Order> Orders { get; set; }    
     }
 }

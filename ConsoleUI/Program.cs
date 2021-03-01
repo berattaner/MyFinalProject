@@ -14,16 +14,27 @@ namespace ConsoleUI
             //DataAccess = Ürünü ekleyecek,listeleyecek.Veri erişimidir.Bizim SQL cümleciklerini yazdığımız yerdir.
             //Business = Ürünü kontrol edecek.İş kuralları yazılır.
             //Console = Ürünü gösterecek.
+            
+            ProductTest();
+            //CategoryTest();
+        }
 
+        private static void CategoryTest()
+        {
+            CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+            foreach (var category in categoryManager.GetAll())
+            {
+                Console.WriteLine(category.CategoryName);
+            }
+        }
+
+        private static void ProductTest()
+        {
             ProductManager productManager = new ProductManager(new EfProductDal());
 
-            //foreach (var product in productManager.GetAllByCategoryId(2)) //2 numardaki rünleri getirdi
-            foreach (var product in productManager.GetByUnitPrice(50, 100))  // min:50 max:100 olan ürünler gelecek.
+            foreach (var product in productManager.GetProductDetails())  
             {
-                Console.WriteLine("Ürünün Adı: " + product.ProductName + " ---->" +
-                    " Ürünün Kategorisi: " + product.CategoryId + " ---->" +
-                    " Ürünün Fiyatı: " + product.UnitPrice + " TL ");
-
+                Console.WriteLine(product.ProductName + "/" + product.CategoryName);
             }
         }
     }
